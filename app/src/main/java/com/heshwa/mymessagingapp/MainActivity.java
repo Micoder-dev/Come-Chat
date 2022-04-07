@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 		}
 		if(item.getItemId() == R.id.itmSettings)
         {
-			Toast.makeText(MainActivity.this,"Settings Clicked",Toast.LENGTH_SHORT).show();
+			startActivity(new Intent(MainActivity.this,SettingsActivity.class));
 		}
         if(item.getItemId() == R.id.itmLogOut)
         {
