@@ -40,12 +40,11 @@ public class SplashScreen extends AppCompatActivity {
 					}
 					else {
 						Intent mainIntent= new Intent(SplashScreen.this, MainActivity.class);
-						mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 						startActivity(mainIntent);
 						finish();
 					}
 				}
-			},6*1000);
+			},3*1000);
 
 /*--
         //splashscreen bg vid

@@ -23,20 +23,14 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/imageView"/>
 
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:orientation="horizontal"
-		android:layout_marginTop="50dp"
-		android:layout_gravity="left">
-
 		<ImageView
+			android:id="@+id/image_profile"
 			android:layout_width="100dp"
 			android:layout_height="100dp"
 			app:srcCompat="@drawable/account_pic"/>
 
 		<LinearLayout
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:orientation="vertical"
 			android:layout_gravity="center"
@@ -46,7 +40,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="Name"
-				android:textSize="18dp"/>
+				android:textSize="18dp"
+				android:layout_gravity="center"/>
 
 			<TextView
 				android:layout_width="wrap_content"
@@ -54,33 +49,23 @@
 				android:text="MI_Coder"
 				android:textSize="24dp"
 				android:id="@+id/txtProfileName"
-				android:textColor="#000000"/>
-			
-			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="Email"
-				android:textSize="18dp"/>
-
-			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="micoder.com@gmail.com"
-				android:textSize="24dp"
-				android:id="@+id/txtEmail"
-				android:textColor="#000000"/>
-
-		</LinearLayout>
+				android:textColor="#000000"
+				android:layout_gravity="center"/>
 
 	</LinearLayout>
 
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
 	<Button
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Logout"
-		android:layout_marginTop="150dp"
+		android:layout_centerInParent="true"
 		android:id="@+id/logoutBtn"
 		android:background="@drawable/background_border"/>
+	</RelativeLayout>
 
 </LinearLayout>
 
