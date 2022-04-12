@@ -9,7 +9,7 @@
 	android:orientation="vertical"
 	android:gravity="center_horizontal"
 	android:background="@drawable/bg_fone"
-	android:id="@+id/linearLayout">
+	android:id="@+id/profileLinearLayout">
 
 	<TextView
 		android:id="@+id/textView"

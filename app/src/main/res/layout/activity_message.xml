@@ -6,15 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MessageActivity"
-    android:background="@drawable/message_backgroud">
+    android:background="@drawable/message_background">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:id="@+id/appbar">
+        android:id="@+id/appbar"
+        android:background="@color/colorPrimaryDark">
 
         <androidx.appcompat.widget.Toolbar
+            android:background="@drawable/background_border"
             android:id="@+id/toolBarMessage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -48,8 +50,7 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/abril_fatface"
                     android:text="last Seen:"
-                    android:textColor="#ffff
-"
+                    android:textColor="#ffff"
                     android:textSize="14sp"
                     android:textStyle="bold|italic" />
             </LinearLayout>
@@ -73,7 +74,7 @@
         <EditText
             android:id="@+id/edtMessage"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_weight="10"
             android:hint="Enter Your Message"
             android:padding="10dp"
@@ -83,17 +84,20 @@
             android:id="@+id/btnSend"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="12dp"
-            android:layout_weight="1.5"
-            app:srcCompat="@android:drawable/ic_menu_send" />
+            android:layout_marginBottom="15dp"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/ic_menu_send"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background_border2"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycularViewMessages"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearBottom"
-        android:layout_below="@+id/appbar"
-        android:id="@+id/recycularViewMessages"/>
+        android:layout_below="@+id/appbar" />
 
 
 </RelativeLayout>
