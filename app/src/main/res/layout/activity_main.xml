@@ -39,7 +39,7 @@
 				android:layout_height="match_parent"
 				android:fontFamily="@font/abril_fatface"
 				android:padding="10dp"
-				android:text="Hello"
+				android:text="Chat Lists"
 				android:textColor="#ffff"
 				android:textSize="24sp"
 				android:textStyle="bold|italic"/>

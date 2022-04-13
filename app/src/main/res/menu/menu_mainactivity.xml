@@ -3,6 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 	<item
+		android:id="@+id/itmContact"
+		android:title="Contact Developer"/>
+	<item
         android:id="@+id/itmAbout"
         android:title="About"
 		android:background="@color/red"/>

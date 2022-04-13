@@ -184,9 +184,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
+        if(item.getItemId() == R.id.itmContact)
+        {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            Uri data = Uri.parse("mailto:micoder.com@gmail.com?subject=" + Uri.encode("Subject") + "&body=" + Uri.encode("//Enter your Queries here..."));
+            intent.setData(data);
+            startActivity(intent);
+        }
 		if(item.getItemId() == R.id.itmAbout)
         {
-			Toast.makeText(MainActivity.this,"About Clicked",Toast.LENGTH_SHORT).show();
+			Toast.makeText(MainActivity.this,"Loading...",Toast.LENGTH_SHORT).show();
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://micoder-dev.github.io/Resume-Page/"));
+            startActivity(browserIntent);
 		}
 		if(item.getItemId() == R.id.itmSettings)
         {
@@ -215,10 +224,6 @@ public class MainActivity extends AppCompatActivity {
 		if(item.getItemId() == R.id.itmExit)
         {
 			//when exit menu clicked alert dialog
-            Toast.makeText(getApplicationContext(),
-						   "Click 'yes' to exit",
-						   Toast.LENGTH_SHORT)
-				.show();
             new AlertDialog.Builder(this)
 				.setMessage("Are you sure want to exit???")
 				.setCancelable(false)
