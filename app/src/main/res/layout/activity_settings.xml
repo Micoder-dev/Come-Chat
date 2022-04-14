@@ -8,4 +8,13 @@
     tools:context=".SettingsActivity"
     android:background="@drawable/bg_forgot">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Settings"
+        android:textSize="50sp"
+        android:textAlignment="center"
+        android:fontFamily="@font/party_gold"
+        android:textColor="@color/colorPrimary"/>
+
 </LinearLayout>

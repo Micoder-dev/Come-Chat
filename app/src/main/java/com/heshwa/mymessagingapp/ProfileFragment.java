@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,6 +28,7 @@ public class ProfileFragment extends Fragment {
     private TextView txtProfile;
     private FirebaseAuth mAuth;
     private DatabaseReference userRef;
+    private ImageView image_profile;
 
     CircleMenu circleMenu;
 
@@ -65,6 +67,13 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        image_profile=view.findViewById(R.id.image_profile);
+        image_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(),"Will be updated soon, or contact the 'developer' for more info!",Toast.LENGTH_LONG).show();
+            }
+        });
 
         circleMenu=view.findViewById(R.id.circle_menu);
 

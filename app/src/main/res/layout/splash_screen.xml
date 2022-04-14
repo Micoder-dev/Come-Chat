@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashScreen"
-    android:background="#FFFFFF">
+    android:background="@color/white">
 
     <!--
     <VideoView
@@ -18,7 +18,7 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/ssgif"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:src="@drawable/g"
         android:layout_centerInParent="true" />

@@ -37,12 +37,13 @@
 				android:id="@+id/txtDisplayName"
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
-				android:fontFamily="@font/abril_fatface"
+				android:fontFamily="@font/organic"
 				android:padding="10dp"
 				android:text="Chat Lists"
-				android:textColor="#ffff"
+				android:textColor="#FFEB3B"
 				android:textSize="24sp"
-				android:textStyle="bold|italic"/>
+				android:shadowColor="@color/black"
+				android:shadowRadius="5"/>
 
 		</androidx.appcompat.widget.Toolbar>
 
