@@ -1,4 +1,5 @@
 # MI-CHAT
-<img src="app\src\main\res\drawable\google.png" width="128"/>
-
+<center>
+<img src="app\src\main\res\drawable\logo.png" width="128"/>
+</center>
 A simple chat application made with Android Studio...
