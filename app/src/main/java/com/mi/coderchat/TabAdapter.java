@@ -1,13 +1,10 @@
-package com.heshwa.mymessagingapp;
-
-import android.widget.Switch;
+package com.mi.coderchat;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
 public class TabAdapter extends FragmentPagerAdapter {
     public TabAdapter(@NonNull FragmentManager fm) {

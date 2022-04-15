@@ -1,4 +1,4 @@
-package com.heshwa.mymessagingapp;
+package com.mi.coderchat;
 
 import android.content.Context;
 

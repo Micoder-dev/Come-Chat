@@ -34,6 +34,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864402924560:android:df16b0d95106f62dc0d695",
+        "android_client_info": {
+          "package_name": "com.mi.coderchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864402924560-ptc0ts36knvuelfmjcbe2tqu5f9g92r5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_6UDUy9mEY2HqgEHPjUA-DN7iNacdE6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864402924560-ptc0ts36knvuelfmjcbe2tqu5f9g92r5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

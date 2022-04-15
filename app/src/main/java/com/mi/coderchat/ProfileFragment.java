@@ -1,4 +1,4 @@
-package com.heshwa.mymessagingapp;
+package com.mi.coderchat;
 
 import android.graphics.Color;
 import android.os.Bundle;

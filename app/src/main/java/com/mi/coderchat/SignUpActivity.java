@@ -1,4 +1,4 @@
-package com.heshwa.mymessagingapp;
+package com.mi.coderchat;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

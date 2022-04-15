@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.heshwa.mymessagingapp">
+    package="com.mi.coderchat">
     <!-- have full network access -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SettingsActivity"
+            android:name="com.mi.coderchat.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name="com.mi.coderchat.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,11 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MessageActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".ForgotPassword" />
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.mi.coderchat.MessageActivity" />
+        <activity android:name="com.mi.coderchat.LoginActivity" />
+        <activity android:name="com.mi.coderchat.SignUpActivity" />
+        <activity android:name="com.mi.coderchat.ForgotPassword" />
+        <activity android:name="com.mi.coderchat.MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
