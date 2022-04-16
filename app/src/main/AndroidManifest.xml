@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.mi.coderchat.SettingsActivity"
+            android:name=".MainActivity2"
             android:exported="false" />
         <activity
-            android:name="com.mi.coderchat.SplashScreen"
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,19 +26,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.mi.coderchat.MessageActivity" />
-        <activity android:name="com.mi.coderchat.LoginActivity" />
-        <activity android:name="com.mi.coderchat.SignUpActivity" />
-        <activity android:name="com.mi.coderchat.ForgotPassword" />
-        <activity android:name="com.mi.coderchat.MainActivity" />
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+        <activity android:name=".MessageActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9312483859588872~7229023647"/>
+            android:value="ca-app-pub-9312483859588872~7229023647" />
     </application>
 
 </manifest>

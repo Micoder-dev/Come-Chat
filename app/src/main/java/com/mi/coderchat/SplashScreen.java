@@ -42,7 +42,7 @@ public class SplashScreen extends AppCompatActivity {
 						finish();
 					}
 				}
-			},11250);
+			},2*1000);
 
 /*--
         //splashscreen bg vid
