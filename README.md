@@ -1,6 +1,8 @@
 # MI-CHAT
 
-<div style="text-align:center"><img src="s\Logo.png" width="128"/></div>
+<p align="center">
+  <img src="s\Logo.png" width="128"/>
+</p>
 A simple chat application made with Android Studio...
 
 <table>
