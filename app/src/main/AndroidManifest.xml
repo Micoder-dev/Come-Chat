@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mi.coderchat">
+    package="com.mi.coderchat" >
     <!-- have full network access -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,7 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
@@ -19,7 +22,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,8 +37,7 @@
 
         <meta-data
             android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts"/>
-
+            android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9312483859588872~9308392076" />

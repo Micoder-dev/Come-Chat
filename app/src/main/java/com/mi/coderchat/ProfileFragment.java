@@ -93,7 +93,7 @@ public class ProfileFragment extends Fragment {
                                 break;
                             case 1:
                                 Toast.makeText(getActivity(),"Search",Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getActivity(),MainActivity2.class));
+                                startActivity(new Intent(getActivity(),MainActivity3.class));
                                 break;
                             case 2:
                                 Toast.makeText(getActivity(),"Notification",Toast.LENGTH_SHORT).show();
