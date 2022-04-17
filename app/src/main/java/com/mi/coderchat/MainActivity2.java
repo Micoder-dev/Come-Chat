@@ -43,7 +43,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 public class MainActivity2 extends AppCompatActivity {
 
     private static final long GAME_LENGTH_MILLISECONDS = 3000;
-    private static final String AD_UNIT_ID = "ca-app-pub-3940256099942544/1033173712";
+    private static final String AD_UNIT_ID = "ca-app-pub-9312483859588872/7219987619";
     private static final String TAG = "MyActivity";
 
     private InterstitialAd interstitialAd;
@@ -72,6 +72,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 showInterstitial();
+
             }
         });
 
@@ -118,6 +119,7 @@ public class MainActivity2 extends AppCompatActivity {
                                         Log.d("TAG", "The ad was shown.");
                                     }
                                 });
+
                     }
 
                     @Override
