@@ -3,6 +3,7 @@ package com.mi.coderchat;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.LoadAdError;
@@ -34,7 +35,7 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                 // Handle the error
-
+                Toast.makeText(MainActivity3.this, "Ad failed to load, please check your internet connection", Toast.LENGTH_SHORT).show();
                 interstitial = null;
             }
         });

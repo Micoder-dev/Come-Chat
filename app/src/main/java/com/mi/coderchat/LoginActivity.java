@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import android.util.Patterns;
 import android.widget.TextView;
 
@@ -92,10 +94,25 @@ public class LoginActivity extends AppCompatActivity {
                                     if(task.isSuccessful())
                                     {
                                         pg.dismiss();
-                                        Toast.makeText(LoginActivity.this,"Successfully Signed in",Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(LoginActivity.this,SplashScreen.class);
-                                        startActivity(intent);
-                                        finish();
+                                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+                                        if (user.isEmailVerified())
+                                        {
+                                            // user is verified, so you can finish this activity or send user to activity which you want.
+                                            Toast.makeText(LoginActivity.this,"Successfully Signed in",Toast.LENGTH_SHORT).show();
+                                            startActivity(new Intent(LoginActivity.this,SplashScreen.class));
+                                            finish();
+                                        }
+                                        else
+                                        {
+                                            // email is not verified, so just prompt the message to the user and restart this activity.
+                                            // NOTE: don't forget to log out the user.
+                                            FirebaseAuth.getInstance().signOut();
+                                            user.sendEmailVerification();
+                                            Toast.makeText(LoginActivity.this, "Please check your email to verify your account, then come back again", Toast.LENGTH_LONG).show();
+                                            //restart this activity
+
+                                        }
                                     }
                                     else
                                     {

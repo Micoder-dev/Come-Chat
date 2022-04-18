@@ -23,7 +23,7 @@ import android.util.Patterns;
 
 public class SignUpActivity extends AppCompatActivity {
     private Button btnSign;
-    private EditText edtUserName ,edtEmail ,edtPassword;
+    private EditText edtUserName ,edtEmail ,edtPassword,edtConfirmPassword;
     private TextView txtAlreadyHAveAccount;
     private FirebaseAuth mAuth;
     private DatabaseReference userRef;
@@ -37,6 +37,7 @@ public class SignUpActivity extends AppCompatActivity {
         btnSign = findViewById(R.id.btnLogin);
         edtEmail = findViewById(R.id.edtEmailLogin);
         edtPassword = findViewById(R.id.edtPasswordLogin);
+        edtConfirmPassword=findViewById(R.id.edtConfirmPasswordLogin);
         edtUserName = findViewById(R.id.edtUserName);
         txtAlreadyHAveAccount = findViewById(R.id.txtAlreadyHaveAccount);
         mAuth = FirebaseAuth.getInstance();
@@ -58,14 +59,14 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                final String userName ,email , password;
+                final String userName ,email , password,confirmPassword;
                 userName =edtUserName.getText().toString();
                 email = edtEmail.getText().toString();
-                password =edtPassword.getText().toString();
+                password =edtPassword.getText().toString().trim();
+                confirmPassword=edtConfirmPassword.getText().toString().trim();
 
-                if(userName.equals("") || email.equals("") || password.equals(""))
+                if(userName.equals("") || email.equals("") || password.equals("") || confirmPassword.equals(""))
                 {
-                    //Toast.makeText(SignUpActivity.this,"All field are Mandatory",Toast.LENGTH_SHORT).show();
 					if(userName.isEmpty()){
 						edtUserName.setError("Full name required");
 						edtUserName.requestFocus();
@@ -92,6 +93,16 @@ public class SignUpActivity extends AppCompatActivity {
 						edtPassword.requestFocus();
 						return;
 					}
+					if (confirmPassword.isEmpty()){
+					    edtConfirmPassword.setError("Confirm password required");
+					    edtConfirmPassword.requestFocus();
+					    return;
+                    }
+                }
+                else if (!confirmPassword.equals(password)){
+                    edtConfirmPassword.setError("Password doesn't match");
+                    edtConfirmPassword.requestFocus();
+                    return;
                 }
                 else
                 {
@@ -111,7 +122,9 @@ public class SignUpActivity extends AppCompatActivity {
                                                     Toast.makeText(SignUpActivity.this,
                                                             userName + " Successfully register",Toast.LENGTH_SHORT).show();
                                                     pg.dismiss();
-                                                    Intent intent = new Intent(SignUpActivity.this,MainActivity.class);
+                                                    Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
+                                                    Toast.makeText(SignUpActivity.this,
+                                                            userName + "Please Enter your registered email & password",Toast.LENGTH_SHORT).show();
                                                     startActivity(intent);
                                                     finish();
                                                 }
