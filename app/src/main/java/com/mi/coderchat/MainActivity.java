@@ -13,6 +13,10 @@ import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -39,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private TabAdapter mTabAdapter;
+
+    private InterstitialAd interstitial;
+    private static final String AD_UNIT_ID = "ca-app-pub-9312483859588872/7219987619";
 	
 	//private ImageView profileImg;
 	//private Uri imageUri;
@@ -51,6 +58,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         txtdiplayUserName = findViewById(R.id.txtDisplayName);
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        InterstitialAd.load(this, AD_UNIT_ID, adRequest, new InterstitialAdLoadCallback() {
+            @Override
+            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                // The mInterstitialAd reference will be null until
+                // an ad is loaded.
+                super.onAdLoaded(interstitialAd);
+                interstitial = interstitialAd;
+                interstitialAd.show(MainActivity.this);
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                // Handle the error
+                Toast.makeText(MainActivity.this, "Ad failed to load, please check your internet connection", Toast.LENGTH_SHORT).show();
+                interstitial = null;
+            }
+        });
 
         //profileImg=findViewById(R.id.profileImg);
         //storage=FirebaseStorage.getInstance();
