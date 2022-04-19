@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,8 +18,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
 import android.util.Patterns;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -38,7 +44,10 @@ public class SignUpActivity extends AppCompatActivity {
         edtEmail = findViewById(R.id.edtEmailLogin);
         edtPassword = findViewById(R.id.edtPasswordLogin);
         edtConfirmPassword=findViewById(R.id.edtConfirmPasswordLogin);
+
         edtUserName = findViewById(R.id.edtUserName);
+        edtUserName.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+
         txtAlreadyHAveAccount = findViewById(R.id.txtAlreadyHaveAccount);
         mAuth = FirebaseAuth.getInstance();
         userRef = FirebaseDatabase.getInstance().getReference().child("Users");
@@ -60,8 +69,8 @@ public class SignUpActivity extends AppCompatActivity {
             {
 
                 final String userName ,email , password,confirmPassword;
-                userName =edtUserName.getText().toString();
-                email = edtEmail.getText().toString();
+                userName =edtUserName.getText().toString().toUpperCase().trim();
+                email = edtEmail.getText().toString().trim();
                 password =edtPassword.getText().toString().trim();
                 confirmPassword=edtConfirmPassword.getText().toString().trim();
 
@@ -104,32 +113,48 @@ public class SignUpActivity extends AppCompatActivity {
                     edtConfirmPassword.requestFocus();
                     return;
                 }
-                else
-                {
-                    pg.show();
-                    mAuth.createUserWithEmailAndPassword(email,password)
-                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                else if (!userName.equals("")){
+                    Query usernameQuery=FirebaseDatabase.getInstance().getReference().child("Users").orderByChild("Name").equalTo(userName);
+                    usernameQuery.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isSuccessful())
-                            {
-                                userRef.child(mAuth.getCurrentUser().getUid()).child("Name").setValue(userName)
-                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.getChildrenCount()>0){
+                                Toast.makeText(SignUpActivity.this,"Choose a different user name",Toast.LENGTH_LONG).show();
+                            }else {
+
+                                pg.show();
+                                mAuth.createUserWithEmailAndPassword(email,password)
+                                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                             @Override
-                                            public void onComplete(@NonNull Task<Void> task) {
+                                            public void onComplete(@NonNull Task<AuthResult> task) {
                                                 if(task.isSuccessful())
                                                 {
-                                                    Toast.makeText(SignUpActivity.this,
-                                                            userName + " Successfully register",Toast.LENGTH_SHORT).show();
-                                                    pg.dismiss();
-                                                    Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
-                                                    Toast.makeText(SignUpActivity.this,
-                                                            userName + "Please Enter your registered email & password",Toast.LENGTH_SHORT).show();
-                                                    startActivity(intent);
-                                                    finish();
+                                                    userRef.child(mAuth.getCurrentUser().getUid()).child("Name").setValue(userName)
+                                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                @Override
+                                                                public void onComplete(@NonNull Task<Void> task) {
+                                                                    if(task.isSuccessful())
+                                                                    {
+                                                                        Toast.makeText(SignUpActivity.this,
+                                                                                userName + " Successfully register",Toast.LENGTH_SHORT).show();
+                                                                        pg.dismiss();
+                                                                        Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
+                                                                        Toast.makeText(SignUpActivity.this,
+                                                                                userName + "Please Enter your registered email & password",Toast.LENGTH_SHORT).show();
+                                                                        startActivity(intent);
+                                                                        finish();
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        pg.dismiss();
+                                                                        Toast.makeText(SignUpActivity.this,
+                                                                                "error: "+task.getException().toString(),Toast.LENGTH_SHORT).show();
+                                                                    }
+
+                                                                }
+                                                            });
                                                 }
-                                                else
-                                                {
+                                                else {
                                                     pg.dismiss();
                                                     Toast.makeText(SignUpActivity.this,
                                                             "error: "+task.getException().toString(),Toast.LENGTH_SHORT).show();
@@ -138,17 +163,13 @@ public class SignUpActivity extends AppCompatActivity {
                                             }
                                         });
                             }
-                            else {
-                                pg.dismiss();
-                                Toast.makeText(SignUpActivity.this,
-                                        "error: "+task.getException().toString(),Toast.LENGTH_SHORT).show();
-                            }
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
 
                         }
                     });
-
                 }
-
             }
         });
     }
