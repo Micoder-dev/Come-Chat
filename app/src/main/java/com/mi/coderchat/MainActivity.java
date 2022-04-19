@@ -74,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
 		// Reference (or instantiate) a ViewPager instance and apply a transformer
 		mViewPager.setPageTransformer(true, (ViewPager.PageTransformer) new ScaleInOutTransformer());
 
+		//tablayout icon
+		mTabLayout.getTabAt(0).setIcon(R.drawable.home_icon);
+        mTabLayout.getTabAt(1).setIcon(R.drawable.search_icon);
+        mTabLayout.getTabAt(2).setIcon(R.drawable.account_pic);
+
         //to hide auto keyboard opens
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 

@@ -37,13 +37,14 @@
 				android:id="@+id/txtDisplayName"
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
-				android:fontFamily="@font/organic"
-				android:padding="10dp"
+				android:fontFamily="@font/sunny"
 				android:text="Chat Lists"
-				android:textColor="#FFEB3B"
-				android:textSize="24sp"
-				android:shadowColor="@color/black"
-				android:shadowRadius="5"/>
+				android:textColor="#E91E63"
+				android:textSize="30sp"
+				android:shadowColor="@color/white"
+				android:shadowRadius="5"
+				android:gravity="center"
+				android:layout_marginRight="40dp"/>
 
 		</androidx.appcompat.widget.Toolbar>
 
@@ -51,9 +52,17 @@
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:id="@+id/tabLayout"
-			app:tabTextColor="#000000"
-			app:tabRippleColor="@color/white"
-			app:tabSelectedTextColor="@color/white"/>
+			app:tabInlineLabel="true"
+			app:tabTextColor="@color/pink"
+			app:tabSelectedTextColor="@color/white"
+			app:tabIndicator="@drawable/background_border"
+			app:tabIndicatorGravity="stretch"
+			app:tabIndicatorColor="@color/pink"
+			app:tabIndicatorAnimationMode="elastic"
+			android:layout_marginTop="5dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:layout_marginBottom="5dp"/>
 
 	</com.google.android.material.appbar.AppBarLayout>
 
