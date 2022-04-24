@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,6 +74,7 @@ public class SearchFragment extends Fragment {
             }
         });
         edtSearch = view.findViewById(R.id.edtSearch);
+        edtSearch.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
         edtSearch.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
