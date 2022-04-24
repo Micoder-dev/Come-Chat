@@ -46,11 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
     private InterstitialAd interstitial;
     private static final String AD_UNIT_ID = "ca-app-pub-9312483859588872/7219987619";
-	
-	//private ImageView profileImg;
-	//private Uri imageUri;
-	//private FirebaseStorage storage;
-	//private StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,11 +74,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //profileImg=findViewById(R.id.profileImg);
-        //storage=FirebaseStorage.getInstance();
-        //storageReference=storage.getReference();
-
-
         mTabLayout = findViewById(R.id.tabLayout);
         mViewPager = findViewById(R.id.viewPager);
         mTabAdapter = new TabAdapter(getSupportFragmentManager());
@@ -92,11 +82,6 @@ public class MainActivity extends AppCompatActivity {
 
         mToolbar = findViewById(R.id.toolBar);
         setSupportActionBar(mToolbar);
-		
-		//imgView2=findViewById(R.id.imgView2);
-		
-		//String imageUri = "https://i.imgur.com/tGbaZCY.jpg";
-		//Picasso.with(this).load(imageUri).into(imgView2);
 		
 		// Reference (or instantiate) a ViewPager instance and apply a transformer
 		mViewPager.setPageTransformer(true, (ViewPager.PageTransformer) new ScaleInOutTransformer());
@@ -108,16 +93,6 @@ public class MainActivity extends AppCompatActivity {
 
         //to hide auto keyboard opens
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-
-		/*
-		//profile image
-        profileImg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                choosePicture();
-            }
-        });
-		 */
 
         userRef = FirebaseDatabase.getInstance().getReference().child("Users");
         mAuth = FirebaseAuth.getInstance();
@@ -135,56 +110,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    /*
-    private void choosePicture() {
-        Intent intent=new Intent();
-        intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(intent,1);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode==1 && resultCode==RESULT_OK && data!=null && data.getData()!=null){
-            imageUri = data.getData();
-            profileImg.setImageURI(imageUri);
-            uploadPicture();
-        }
-    }
-
-    private void uploadPicture() {
-        final ProgressDialog pd = new ProgressDialog(this);
-        pd.setTitle("Uploading Image...");
-        pd.show();
-
-        final String randomKey= UUID.randomUUID().toString();
-        StorageReference riversRef=storageReference.child("images/"+randomKey);
-
-        riversRef.putFile(imageUri)
-                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        pd.dismiss();
-                        Snackbar.make(findViewById(android.R.id.content),"Image Uploaded",Snackbar.LENGTH_LONG).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        pd.dismiss();
-                        Toast.makeText(getApplicationContext(),"Failed to upload",Toast.LENGTH_LONG).show();
-                    }
-                }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
-                double progressPercent=(100.00 * taskSnapshot.getBytesTransferred() / taskSnapshot.getTotalByteCount());
-                pd.setMessage("Progress: "+(int) progressPercent + "%");
-            }
-        });
-    }
-
-     */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
