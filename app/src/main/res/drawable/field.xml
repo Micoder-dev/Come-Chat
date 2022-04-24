@@ -6,8 +6,8 @@ android:shape="rectangle">
 <corners
     android:radius="10dp" />
     <gradient
-        android:centerColor="@color/colorPrimaryDark"
-        android:endColor="@color/pink"
-        android:startColor="@color/pink"/>
+        android:centerColor="@color/aqua"
+        android:endColor="@color/skyBlue"
+        android:startColor="@color/skyBlue"/>
 
 </shape>
