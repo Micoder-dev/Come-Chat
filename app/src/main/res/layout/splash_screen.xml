@@ -32,7 +32,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:fontFamily="@font/heart"
-        android:shadowColor="@color/red"
+        android:shadowColor="@android:color/holo_blue_dark"
         android:shadowRadius="50"/>
 
 </RelativeLayout>

@@ -57,7 +57,7 @@
 			app:tabSelectedTextColor="@color/white"
 			app:tabIndicator="@drawable/background_border"
 			app:tabIndicatorGravity="stretch"
-			app:tabIndicatorColor="@color/pink"
+			app:tabIndicatorColor="@android:color/holo_blue_bright"
 			app:tabIndicatorAnimationMode="elastic"
 			android:layout_marginTop="5dp"
 			android:layout_marginLeft="5dp"

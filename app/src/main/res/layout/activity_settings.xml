@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingsActivity"
-    android:background="@drawable/bg_forgot">
+    android:background="@drawable/bg_fone">
 
     <TextView
         android:id="@+id/settingsTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/party_gold"
+        android:fontFamily="@font/organic"
         android:text="Settings"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/skyBlue"
         android:textSize="50sp" />
 
     <View
@@ -38,13 +38,13 @@
 
     <TextView
         android:id="@+id/textView02"
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2.1"
         android:layout_below="@+id/textView01"
+        android:layout_marginTop="20dp"
+        android:text="4.0"
         android:textAlignment="center"
-        android:textColor="#F4105E"/>
+        android:textColor="@color/white" />
 
     <View
         android:id="@+id/view02"
@@ -83,5 +83,16 @@
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:layout_below="@+id/btnUpdate"/>
+    <Button
+        android:id="@+id/deleteAcBtn"
+        android:drawableLeft="@drawable/info_icon"
+        android:drawableTint="@color/red"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:text="Delete Your Account"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/round_bg"/>
 
 </RelativeLayout>

@@ -8,7 +8,6 @@
 	tools:context=".ProfileFragment"
 	android:orientation="vertical"
 	android:gravity="center_horizontal"
-	android:background="@drawable/bg_fone"
 	android:id="@+id/profileLinearLayout">
 
 	<pl.droidsonroids.gif.GifImageView

@@ -17,7 +17,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    private Button btnUpdate;
+    private Button btnUpdate,btnDelete;
 
     private InterstitialAd interstitial;
     private static final String AD_UNIT_ID = "ca-app-pub-9312483859588872/7219987619";
@@ -28,6 +28,7 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         btnUpdate=findViewById(R.id.btnUpdate);
+        btnDelete=findViewById(R.id.deleteAcBtn);
 
         AdRequest adRequest = new AdRequest.Builder().build();
 
@@ -55,6 +56,19 @@ public class SettingsActivity extends AppCompatActivity {
                 checkUpdate();
             }
         });
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deteleAccount();
+            }
+        });
+    }
+
+    private void deteleAccount() {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        Uri data = Uri.parse("mailto:micoder.com@gmail.com?subject=" + Uri.encode("Account Deletion from 'COMECHAT'") + "&body=" + Uri.encode("Enter your reason for deleting your account('_____'),\n\nYour UserName in ComeChat('_____')\n\nYour Email in ComeChat('_____')\n\n\nIf we want to improve any features('____')"));
+        intent.setData(data);
+        startActivity(intent);
     }
 
     private void checkUpdate() {

@@ -8,12 +8,14 @@
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/background_border3.xml" value="0.2115" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/background_border4.xml" value="0.2115" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/cancel_icon.xml" value="0.1645" />
+        <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/field.xml" value="0.1645" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/gps_icon.xml" value="0.1645" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/home_icon.xml" value="0.1645" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/ic_lock.xml" value="0.1645" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/menu_icon.xml" value="0.1645" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/round_bg.xml" value="0.1645" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/round_border.xml" value="0.1645" />
+        <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/round_border2.xml" value="0.1645" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/search_icon.xml" value="0.1645" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/settings_icon.xml" value="0.1645" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/wave.xml" value="0.1645" />
@@ -27,6 +29,8 @@
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/layout/fragment_chat_list.xml" value="0.25" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/layout/fragment_search.xml" value="0.25" />
+        <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/layout/message_item.xml" value="0.25" />
+        <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/layout/splash_screen.xml" value="0.25" />
         <entry key="..\:/Users/micod/Desktop/APPS/Come Chat/app/src/main/res/layout/activity_main2.xml" value="0.25" />
         <entry key="..\:/Users/micod/Desktop/APPS/Come Chat/app/src/main/res/layout/activity_settings.xml" value="0.25" />
         <entry key="..\:/Users/micod/Desktop/APPS/MI-CHAT/app/src/main/res/layout/activity_main.xml" value="0.25" />

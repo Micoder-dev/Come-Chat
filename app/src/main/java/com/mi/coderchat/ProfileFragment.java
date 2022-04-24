@@ -1,9 +1,12 @@
 package com.mi.coderchat;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -78,11 +81,11 @@ public class ProfileFragment extends Fragment {
         circleMenu=view.findViewById(R.id.circle_menu);
 
         circleMenu.setMainMenu(Color.parseColor("#FF69B4"),R.drawable.menu_icon,R.drawable.cancel_icon)
-                .addSubMenu(Color.parseColor("#88bef5"),R.drawable.home_icon)
-                .addSubMenu(Color.parseColor("#83e85a"),R.drawable.search_icon)
-                .addSubMenu(Color.parseColor("#FF4832"),R.drawable.notification_icon)
-                .addSubMenu(Color.parseColor("#ba53de"),R.drawable.settings_icon)
-                .addSubMenu(Color.parseColor("#ff8a5c"),R.drawable.gps_icon)
+                .addSubMenu(Color.parseColor("#FF69B4"),R.drawable.home_icon)
+                .addSubMenu(Color.parseColor("#83e85a"),R.drawable.email_contact)
+                .addSubMenu(Color.parseColor("#ba53de"),R.drawable.exit_icon)
+                .addSubMenu(Color.parseColor("#FF4832"),R.drawable.settings_icon)
+                .addSubMenu(Color.parseColor("#ff8a5c"),R.drawable.info_icon)
                 .setOnMenuSelectedListener(new OnMenuSelectedListener() {
                     @Override
                     public void onMenuSelected(int index) {
@@ -92,18 +95,32 @@ public class ProfileFragment extends Fragment {
                                 startActivity(new Intent(getActivity(),MainActivity.class));
                                 break;
                             case 1:
-                                Toast.makeText(getActivity(),"Search",Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getActivity(),MainActivity3.class));
+                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                Uri data = Uri.parse("mailto:micoder.com@gmail.com?subject=" + Uri.encode("Subject") + "&body=" + Uri.encode("//Enter your Queries here..."));
+                                intent.setData(data);
+                                startActivity(intent);
                                 break;
                             case 2:
-                                Toast.makeText(getActivity(),"Notification",Toast.LENGTH_SHORT).show();
+                                new AlertDialog.Builder(getContext())
+                                        .setMessage("Are you sure want to exit???")
+                                        .setCancelable(false)
+                                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogInterface, int i) {
+                                                getActivity().finish();
+                                            }
+                                        })
+                                        .setNegativeButton("No", null)
+                                        .show();
                                 break;
                             case 3:
                                 Toast.makeText(getActivity(),"Settings",Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(getActivity(),SettingsActivity.class));
                                 break;
                             case 4:
-                                Toast.makeText(getActivity(),"GPS",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(),"Loading...",Toast.LENGTH_SHORT).show();
+                                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://micoder-dev.github.io/Resume-Page/"));
+                                startActivity(browserIntent);
                                 break;
                         }
                     }

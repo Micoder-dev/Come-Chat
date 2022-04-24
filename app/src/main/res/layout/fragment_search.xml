@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".SearchFragment"
     android:orientation="vertical"
-    android:padding="10dp"
-	android:background="@drawable/bg_fone">
+    android:padding="10dp">
 	
     <EditText
         android:layout_width="match_parent"
@@ -14,7 +13,7 @@
         android:hint="Search"
         android:gravity="center"
         android:id="@+id/edtSearch"
-        android:background="@drawable/round_border"/>
+        android:background="@drawable/round_border2"/>
 
 
     <ListView
