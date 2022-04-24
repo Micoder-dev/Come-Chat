@@ -83,14 +83,5 @@
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:layout_below="@+id/btnUpdate"/>
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:text="Logout"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/background_border2"/>
 
 </RelativeLayout>

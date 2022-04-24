@@ -15,7 +15,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    private Button btnUpdate,btnLogout;
+    private Button btnUpdate;
 
     private InterstitialAd interstitial;
     private static final String AD_UNIT_ID = "ca-app-pub-9312483859588872/7219987619";
@@ -26,7 +26,6 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         btnUpdate=findViewById(R.id.btnUpdate);
-        btnLogout=findViewById(R.id.btnLogout);
 
         AdRequest adRequest = new AdRequest.Builder().build();
 
@@ -54,18 +53,10 @@ public class SettingsActivity extends AppCompatActivity {
                 checkUpdate();
             }
         });
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                logout();
-            }
-        });
     }
 
     private void checkUpdate() {
         Toast.makeText(SettingsActivity.this,"please wait for the updates",Toast.LENGTH_SHORT).show();
-    }
-    private void logout() {
     }
 
 }
