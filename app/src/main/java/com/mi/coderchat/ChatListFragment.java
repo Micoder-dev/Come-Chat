@@ -1,10 +1,12 @@
 package com.mi.coderchat;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -13,7 +15,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -32,7 +37,10 @@ public class ChatListFragment extends Fragment {
     private DatabaseReference userRef;
     public  ArrayList<String> ids;
 
-
+    FloatingActionMenu fabMenu;
+    FloatingActionButton fabSettings;
+    FloatingActionButton fabExit;
+    FloatingActionButton fabShare;
 
 
     public ChatListFragment() {
@@ -89,6 +97,54 @@ public class ChatListFragment extends Fragment {
                         }
                     });
                 }
+                //FAB
+                fabMenu=view.findViewById(R.id.fabMenu);
+                fabSettings=view.findViewById(R.id.fabSettings);
+                fabExit=view.findViewById(R.id.fabExit);
+                fabShare=view.findViewById(R.id.fabShare);
+
+                fabShare.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        try {
+                            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                            shareIntent.setType("text/plain");
+                            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+                            String shareMessage= "\nLet me recommend you this application\n\n";
+                            shareMessage = shareMessage + "https://play.google.com/store/apps/developer?id=MI_CODER"+"\n\n";
+                            shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+                            startActivity(Intent.createChooser(shareIntent, "choose one"));
+                        } catch(Exception e) {
+                            //e.toString();
+                        }
+                        fabMenu.close(true);
+                    }
+                });
+                fabSettings.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(getActivity(), "Settings", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getActivity(),SettingsActivity.class));
+                        fabMenu.close(true);
+                    }
+                });
+                fabExit.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        new AlertDialog.Builder(getActivity())
+                                .setMessage("Are you sure want to exit???")
+                                .setCancelable(false)
+                                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        getActivity().finish();
+                                    }
+                                })
+                                .setNegativeButton("No", null)
+                                .show();
+                        fabMenu.close(true);
+                    }
+                });
 
             }
 

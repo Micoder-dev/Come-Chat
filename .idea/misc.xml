@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1565" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/account_pic.xml" value="0.1565" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/account_pic2.xml" value="0.1565" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/background_border.xml" value="0.2115" />
@@ -14,6 +15,7 @@
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/gps_icon.xml" value="0.1645" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/home_icon.xml" value="0.1645" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/ic_email.xml" value="0.1645" />
+        <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1565" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/ic_lock.xml" value="0.1645" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/ic_person.xml" value="0.1645" />
         <entry key="..\:/Users/micod/AndroidStudioProjects/Come Chat/app/src/main/res/drawable/ic_person2.xml" value="0.1645" />
