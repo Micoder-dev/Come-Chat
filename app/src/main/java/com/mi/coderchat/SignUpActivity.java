@@ -140,7 +140,7 @@ public class SignUpActivity extends AppCompatActivity {
                                                                         pg.dismiss();
                                                                         Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
                                                                         Toast.makeText(SignUpActivity.this,
-                                                                                userName + "Please Enter your registered email & password",Toast.LENGTH_SHORT).show();
+                                                                                userName + " Please Enter your registered email & password",Toast.LENGTH_SHORT).show();
                                                                         startActivity(intent);
                                                                         finish();
                                                                     }

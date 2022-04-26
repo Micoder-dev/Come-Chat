@@ -107,6 +107,9 @@ public class LoginActivity extends AppCompatActivity {
                                         {
                                             // email is not verified, so just prompt the message to the user and restart this activity.
                                             // NOTE: don't forget to log out the user.
+                                            pg.setTitle("Email Verification");
+                                            pg.setMessage("Please goto your email & verify the link sent from 'noreply',\nafter verification click anywhere to close this dialog & hit the login again");
+                                            pg.show();
                                             FirebaseAuth.getInstance().signOut();
                                             user.sendEmailVerification();
                                             Toast.makeText(LoginActivity.this, "Please check your email to verify your account, then come back again", Toast.LENGTH_LONG).show();
