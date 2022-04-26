@@ -80,7 +80,7 @@ public class ProfileFragment extends Fragment {
 
         circleMenu=view.findViewById(R.id.circle_menu);
 
-        circleMenu.setMainMenu(Color.parseColor("#FF69B4"),R.drawable.menu_icon,R.drawable.cancel_icon)
+        circleMenu.setMainMenu(Color.parseColor("#83e85a"),R.drawable.menu_icon,R.drawable.cancel_icon)
                 .addSubMenu(Color.parseColor("#FF69B4"),R.drawable.home_icon)
                 .addSubMenu(Color.parseColor("#83e85a"),R.drawable.email_contact)
                 .addSubMenu(Color.parseColor("#ba53de"),R.drawable.exit_icon)

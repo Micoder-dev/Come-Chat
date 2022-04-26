@@ -21,7 +21,7 @@
 			android:id="@+id/image_profile"
 			android:layout_width="100dp"
 			android:layout_height="100dp"
-			app:srcCompat="@drawable/account_pic"/>
+			app:srcCompat="@drawable/account_pic2"/>
 
 		<LinearLayout
 			android:layout_width="match_parent"
@@ -36,7 +36,7 @@
 				android:text="Name"
 				android:textSize="18dp"
 				android:layout_gravity="center"
-				android:textColor="#E47B9F"/>
+				android:textColor="#4CAF50"/>
 
 			<TextView
 				android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
 				android:text="MI_Coder"
 				android:textSize="24dp"
 				android:id="@+id/txtProfileName"
-				android:textColor="#E91E63"
+				android:textColor="#4CAF50"
 				android:layout_gravity="center"
 				android:fontFamily="@font/sunny"/>
 
