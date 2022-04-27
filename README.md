@@ -9,9 +9,11 @@ A simple chat application made with Android Studio...
   <tr>
     <td>Home</td>
     <td>Splash Screen</td>
+    <td>Login</td>
+    <td>Chat Lists</td>
+    <td>Messaging</td>
     <td>Profile</td>
-    <td>Chat</td>
-    <td>WebPage</td>
+    <td>Settings</td>
   </tr>
   <tr>
     <td><img src="s\s1.jpg" width="128"/></td>
@@ -19,6 +21,8 @@ A simple chat application made with Android Studio...
     <td><img src="s\s3.jpg" width="128"/></td>
     <td><img src="s\s4.jpg" width="128"/></td>
     <td><img src="s\s5.jpg" width="128"/></td>
+    <td><img src="s\s6.jpg" width="128"/></td>
+    <td><img src="s\s7.jpg" width="128"/></td>
   </tr>
  </table>
 
