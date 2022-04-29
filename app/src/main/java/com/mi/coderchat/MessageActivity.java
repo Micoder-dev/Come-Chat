@@ -3,16 +3,21 @@ package com.mi.coderchat;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.icu.text.DateFormat;
 import android.icu.text.SimpleDateFormat;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -220,6 +225,31 @@ public class MessageActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+        //menu bar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.message_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.itmReport)
+        {
+            Toast.makeText(MessageActivity.this,"Report",Toast.LENGTH_SHORT).show();
+        }
+        if(item.getItemId() == R.id.itmBlock)
+        {
+            Toast.makeText(MessageActivity.this,"Blocked",Toast.LENGTH_SHORT).show();
+        }
+        if(item.getItemId() == R.id.itmHelp)
+        {
+            Toast.makeText(MessageActivity.this,"Help",Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }
