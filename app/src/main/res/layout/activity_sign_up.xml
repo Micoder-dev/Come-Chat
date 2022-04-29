@@ -61,7 +61,7 @@
         android:drawablePadding="16dp"
         android:ems="10"
         android:hint="Name"
-        android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_"
         android:inputType="textFilter"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"

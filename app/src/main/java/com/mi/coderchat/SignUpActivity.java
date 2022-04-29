@@ -120,6 +120,9 @@ public class SignUpActivity extends AppCompatActivity {
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             if (snapshot.getChildrenCount()>0){
                                 Toast.makeText(SignUpActivity.this,"Choose a different user name",Toast.LENGTH_LONG).show();
+                                edtUserName.setError("Name Already in use");
+                                edtUserName.requestFocus();
+                                return;
                             }else {
 
                                 pg.show();

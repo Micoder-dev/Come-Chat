@@ -57,10 +57,37 @@
         android:layout_below="@+id/textView02"/>
 
     <TextView
+        android:id="@+id/changeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Change User Name"
+        android:layout_below="@+id/view02"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btnChangeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change"
+        android:layout_below="@+id/changeName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_border2"/>
+    <View
+        android:id="@+id/view03"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/btnChangeName"/>
+    <TextView
         android:id="@+id/textView03"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/view02"
+        android:layout_below="@+id/view03"
         android:text="CHECK FOR UPDATES."
         android:textSize="20sp"
         android:textAlignment="center"
@@ -75,7 +102,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/background_border2"/>
     <View
-        android:id="@+id/view03"
+        android:id="@+id/view04"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"

@@ -17,7 +17,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    private Button btnUpdate,btnDelete;
+    private Button btnUpdate,btnDelete,btnChangeName;
 
     private InterstitialAd interstitial;
     private static final String AD_UNIT_ID = "ca-app-pub-9312483859588872/7219987619";
@@ -29,6 +29,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         btnUpdate=findViewById(R.id.btnUpdate);
         btnDelete=findViewById(R.id.deleteAcBtn);
+        btnChangeName=findViewById(R.id.btnChangeName);
 
         AdRequest adRequest = new AdRequest.Builder().build();
 
@@ -62,6 +63,16 @@ public class SettingsActivity extends AppCompatActivity {
                 deteleAccount();
             }
         });
+        btnChangeName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeUserName();
+            }
+        });
+    }
+
+    private void changeUserName() {
+        startActivity(new Intent(SettingsActivity.this,ChangeUserName.class));
     }
 
     private void deteleAccount() {

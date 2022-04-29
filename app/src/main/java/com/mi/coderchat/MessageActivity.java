@@ -243,7 +243,7 @@ public class MessageActivity extends AppCompatActivity {
         }
         if(item.getItemId() == R.id.itmBlock)
         {
-            Toast.makeText(MessageActivity.this,"Blocked",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MessageActivity.this,"Will be added on next Update, so please be patient",Toast.LENGTH_SHORT).show();
         }
         if(item.getItemId() == R.id.itmHelp)
         {
