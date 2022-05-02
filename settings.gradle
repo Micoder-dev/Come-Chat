@@ -1,2 +1,2 @@
-include ':app'  , ':ToxicBakery', ':CircleMenu', ':FloatingActionButton'
+include ':app'  , ':ToxicBakery', ':CircleMenu', ':FloatingActionButton', ':CircleImageView'
 rootProject.name = "Come Chat"
