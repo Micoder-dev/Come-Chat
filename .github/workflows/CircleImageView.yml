@@ -1,0 +1,26 @@
+name: CircleImageView
+on: workflow_dispatch
+jobs:
+  build:
+    name: Build AAR
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: set up JDK 17
+      uses: actions/setup-java@v2
+      with:
+        java-version: '17'
+        distribution: 'adopt'
+        cache: gradle
+    
+    - name: Running gradle assembleRelease
+      run: |
+          cd CircleImageView
+          gradle assembleRelease
+
+    - name: Uploading AAR and Files
+      uses: actions/upload-artifact@v2
+      with:
+        name: CircleImageView
+        path: |
+              /build
