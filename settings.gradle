@@ -1,2 +1,2 @@
-include ':app'  
+include ':app'  , ':ToxicBakery'
 rootProject.name = "Come Chat"
