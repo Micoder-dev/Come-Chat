@@ -1,4 +1,4 @@
-name: CircleImageView
+//name: CircleImageView
 on: workflow_dispatch
 jobs:
   build:
@@ -22,5 +22,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: CircleImageView
-        path: CircleImageView/build
+        path: CircleImageView/build/outputs/aar
 
