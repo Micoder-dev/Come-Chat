@@ -57,5 +57,6 @@ implementation project(':ToxicBakery')
  // implementation 'com.github.Hitomis:CircleMenu:v1.1.0'
 
     implementation 'com.google.android.gms:play-services-ads:20.6.0'
-    implementation 'com.github.clans:fab:1.6.2'
+    implementation project(':FloatingActionButton')
+   // implementation 'com.github.clans:fab:1.6.2'
 }
