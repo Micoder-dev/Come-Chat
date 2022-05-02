@@ -24,5 +24,6 @@ android {
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar']) 
-implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.viewpager:viewpager:1.1.0-alpha01"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     }
