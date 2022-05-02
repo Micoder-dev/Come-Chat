@@ -16,7 +16,7 @@ jobs:
     - name: Running gradle assembleRelease
       run: |
           cd CircleMenu
-          gradle assembleRelease
+          gradle build
 
     - name: Uploading AAR and Files
       uses: actions/upload-artifact@v2
