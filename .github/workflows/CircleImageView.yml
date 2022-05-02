@@ -16,12 +16,12 @@ jobs:
     - name: Running gradle assembleRelease
       run: |
           cd CircleImageView
-          gradle build
-          ls
+          gradle assembleRelease
+        
 
     - name: Uploading AAR and Files
       uses: actions/upload-artifact@v2
       with:
         name: CircleImageView
-        path: |
-              /build
+        path: CircleImageView/build
+
