@@ -1,0 +1,14 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="de.hdodenhof.circleimageview" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="21"
+6-->C:\Users\micod\OneDrive\Desktop\App Projects\Come-Chat\CircleImageView\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="32" />
+7-->C:\Users\micod\OneDrive\Desktop\App Projects\Come-Chat\CircleImageView\src\main\AndroidManifest.xml
+8
+9    <application />
+9-->C:\Users\micod\OneDrive\Desktop\App Projects\Come-Chat\CircleImageView\src\main\AndroidManifest.xml:5:5-20
+10
+11</manifest>

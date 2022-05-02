@@ -1,0 +1,1 @@
+com.ToxicBakery.viewpager.transforms

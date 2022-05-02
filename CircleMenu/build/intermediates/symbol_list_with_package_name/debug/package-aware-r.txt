@@ -1,0 +1,2 @@
+com.hitomi.cmlibrary
+string app_name
