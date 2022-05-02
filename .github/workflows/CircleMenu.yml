@@ -22,5 +22,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: CircleMenu
-        path: |
-              /build
+        path: CircleMenu/build
+
