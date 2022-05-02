@@ -52,11 +52,15 @@ implementation project(':ToxicBakery')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-analytics:20.1.2'
     implementation 'com.google.firebase:firebase-auth:21.0.3'
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
-    implementation project(':CircleMenu')
+ 
+  implementation project(':CircleImageView')
+// implementation 'de.hdodenhof:circleimageview:3.1.0'
+  
+  implementation project(':CircleMenu')
  // implementation 'com.github.Hitomis:CircleMenu:v1.1.0'
 
     implementation 'com.google.android.gms:play-services-ads:20.6.0'
-    implementation project(':FloatingActionButton')
+ 
+   implementation project(':FloatingActionButton')
    // implementation 'com.github.clans:fab:1.6.2'
 }
