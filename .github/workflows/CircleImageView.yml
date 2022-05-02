@@ -1,4 +1,4 @@
-//name: CircleImageView
+name: CircleImageView
 on: workflow_dispatch
 jobs:
   build:
