@@ -1,4 +1,4 @@
-name: Upload Release Apk
+name: ToxicBakery
 on: workflow_dispatch
 jobs:
   build:
