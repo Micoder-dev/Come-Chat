@@ -22,5 +22,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: FloatingActionButton
-        path: FloatingActionButton/build
+        path: FloatingActionButton/build/outputs/aar
 
