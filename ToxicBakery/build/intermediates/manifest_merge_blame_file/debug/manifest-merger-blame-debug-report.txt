@@ -19,8 +19,8 @@
 19
 20    <uses-sdk
 21        android:minSdkVersion="21"
-21-->C:\Users\micod\OneDrive\Desktop\App Projects\Come-Chat\ToxicBakery\src\main\AndroidManifest.xml
+21-->/home/micoder/StudioProjects/Come-Chat/ToxicBakery/src/main/AndroidManifest.xml
 22        android:targetSdkVersion="32" />
-22-->C:\Users\micod\OneDrive\Desktop\App Projects\Come-Chat\ToxicBakery\src\main\AndroidManifest.xml
+22-->/home/micoder/StudioProjects/Come-Chat/ToxicBakery/src/main/AndroidManifest.xml
 23
 24</manifest>
